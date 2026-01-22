@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hibiki Resonance (RESO) Official</title>
     <style>
-        /* ここからCSS：10分で見た目を整える魔法 */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f0f4f8; /* 富士山をイメージした薄い水色 */
+            background-color: #f0f4f8;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -29,22 +28,16 @@
         h1 { color: #0052cc; margin-bottom: 0.5rem; font-size: 1.8rem; }
         .supply { font-weight: bold; font-size: 1.1rem; color: #555; margin-bottom: 1.5rem; }
         .highlight { color: #d32f2f; font-weight: bold; }
-        .launch-box {
-            background: #eef4ff;
-            padding: 1rem;
+        .info-box {
+            text-align: left;
+            background: #f8faff;
+            padding: 1.2rem;
             border-radius: 12px;
             margin: 1.5rem 0;
             border: 1px solid #cce0ff;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
-        <div class="launch-box" style="text-align: left; font-size: 0.9rem;">
-    <strong>📊 Tokenomics</strong><br>
-    • Total Supply: 37,760,000 RESO<br>
-    • Mint: Disabled (追加発行不可)<br>
-    • LP Burn: Scheduled on Feb 23<br><br>
-    <strong>📍 Contract Address</strong><br>
-    <code style="word-break: break-all; color: #0052cc;">0xeBB87740aA28b48aDE68E5A3D5555cc270C125F</code>
-</div>
-
         .x-link {
             display: inline-block;
             background-color: #000;
@@ -54,10 +47,21 @@
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
+            margin-top: 1rem;
         }
         .x-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        code {
+            display: block;
+            background: #eee;
+            padding: 8px;
+            border-radius: 6px;
+            word-break: break-all;
+            font-family: monospace;
+            margin-top: 5px;
+            color: #0052cc;
         }
     </style>
 </head>
@@ -68,15 +72,18 @@
         
         <p>富士山の標高にちなんだ発行枚数を持つ、<br>Baseネットワークのコミュニティトークン。</p>
         
-        <div class="launch-box">
-            🚀 <strong>2026.02.23 (富士山の日) 始動</strong>
+        <div class="info-box">
+            <strong>📊 Tokenomics</strong><br>
+            • Mint: Disabled (追加発行不可)<br>
+            • LP Burn: Scheduled on Feb 23<br>
+            • Network: Base Mainnet<br><br>
+            <strong>📍 Contract Address</strong>
+            <code>0xeBB87740aA28b48aDE68E5A3D5555cc270C125F</code>
         </div>
 
+        <p>🚀 <strong>2026.02.23 (富士山の日) 始動</strong></p>
+
         <a href="https://x.com/Hibiki_RESO_223" class="x-link">Official X (Twitter)</a>
-        
-        <p style="font-size: 0.8rem; color: #999; margin-top: 2rem;">
-            Contract: 0xeBB87...C125F
-        </p>
     </div>
 </body>
 </html>
