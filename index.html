@@ -12,37 +12,62 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
             margin: 0;
-            text-align: center;
+            padding: 2rem 0;
         }
         .container {
             background: white;
             padding: 2.5rem;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,82,204,0.1);
-            max-width: 450px;
+            border-radius: 28px;
+            box-shadow: 0 15px 35px rgba(0,82,204,0.1);
+            max-width: 550px;
             width: 90%;
+            text-align: center;
         }
-        h1 { color: #0052cc; margin-bottom: 0.5rem; font-size: 1.8rem; }
-        .supply { font-weight: bold; font-size: 1.1rem; color: #555; margin-bottom: 1.5rem; }
+        h1 { color: #0052cc; margin-bottom: 0.5rem; font-size: 2rem; }
+        .supply { font-weight: bold; font-size: 1.1rem; color: #555; margin-bottom: 2rem; }
         .highlight { color: #d32f2f; font-weight: bold; }
+        
+        .section-title {
+            font-size: 1.2rem;
+            color: #0052cc;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eef4ff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .story-text {
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
         .info-box {
             text-align: left;
             background: #f8faff;
-            padding: 1.2rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin: 2rem 0;
             border: 1px solid #cce0ff;
             font-size: 0.9rem;
-            line-height: 1.6;
+        }
+        code {
+            display: block;
+            background: #eee;
+            padding: 10px;
+            border-radius: 8px;
+            word-break: break-all;
+            font-family: monospace;
+            margin-top: 8px;
+            color: #0052cc;
         }
         .x-link {
             display: inline-block;
             background-color: #000;
             color: white;
-            padding: 12px 24px;
+            padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -50,18 +75,14 @@
             margin-top: 1rem;
         }
         .x-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
-        code {
-            display: block;
-            background: #eee;
-            padding: 8px;
-            border-radius: 6px;
-            word-break: break-all;
-            font-family: monospace;
-            margin-top: 5px;
+        .footer-date {
+            margin-top: 2rem;
+            font-weight: bold;
             color: #0052cc;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -69,21 +90,35 @@
     <div class="container">
         <h1>Hibiki Resonance ($RESO)</h1>
         <p class="supply">Total Supply: <span class="highlight">37,760,000</span></p>
-        
-        <p>富士山の標高にちなんだ発行枚数を持つ、<br>Baseネットワークのコミュニティトークン。</p>
-        
+
+        <div class="story-text">
+            <span class="section-title">Our Story</span><br>
+            情報工学を専攻する一人の学生として、ブロックチェーンという革新的な技術の「透明性」と「可能性」に深く魅了されました。<br><br>
+            「技術を形にし、誰かの心に響かせたい」という想い、そして日本が誇る富士山の圧倒的な存在感。この二つを融合させたのが、Hibiki Resonance ($RESO) です。
+        </div>
+
+        <div class="story-text">
+            <span class="section-title">Our Vision</span><br>
+            私たちの目的は、単なるミームコインを作ることではありません。富士山の標高 $3,776m$ にちなんだ発行枚数には、発行主の母国である日本の象徴と「共に高みを目指す」という願いが込められています。<br><br>
+            Baseネットワークの頂点を目指し、技術的な誠実さとコミュニティの共鳴（Resonance）を大切にするエコシステムを築き上げます。
+        </div>
+
         <div class="info-box">
-            <strong>・Tokenomics</strong><br>
+            <strong>・ Tokenomics</strong><br>
             • Mint: Disabled (追加発行不可)<br>
             • LP Burn: Scheduled on Feb 23<br>
             • Network: Base Mainnet<br><br>
-            <strong> ・Contract Address</strong>
+            <strong>・ Contract Address</strong>
             <code>0xeBB87740aA28b48aDE68E5A3D5555cc270C125F</code>
         </div>
 
-        <p> <strong>・2026.02.23 (富士山の日) 始動</strong></p>
+        <p class="footer-date">⛰️ 2026.02.23 (富士山の日) 始動</p>
 
-        <a href="https://x.com/Hibiki_RESO_223" class="x-link">Official X (Twitter)</a>
+        <a href="https://x.com/Hibiki_RESO_223" class="x-link">Follow on Official X</a>
+        
+        <p style="font-size: 0.8rem; color: #999; margin-top: 2.5rem;">
+            © 2026 Hibiki Resonance Project.
+        </p>
     </div>
 </body>
 </html>
