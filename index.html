@@ -3,140 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hibiki Resonance ($RESO)</title>
+    <title>Hibiki Resonance (RESO) Official</title>
+    
     <style>
         body {
-            background-color: #0f172a;
-            color: #f8fafc;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        header {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 10px 0;
-            color: #3b82f6;
+            margin: 0;
+            padding: 2rem 0;
         }
         .container {
-            max-width: 800px;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 15px 35px rgba(0,82,204,0.1);
+            max-width: 550px;
             width: 90%;
-            margin-bottom: 50px;
-        }
-        /* コピーボタンのセクション */
-        .contract-section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #1e40af;
             text-align: center;
-            margin: 30px 0;
         }
-        .contract-title {
+        h1 { color: #0052cc; margin-bottom: 0.5rem; font-size: 2rem; }
+        .supply { font-weight: bold; font-size: 1.1rem; color: #555; margin-bottom: 2rem; }
+        .highlight { color: #d32f2f; font-weight: bold; }
+        
+        .section-title {
+            font-size: 1.2rem;
+            color: #0052cc;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eef4ff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .story-text {
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+        .info-box {
+            text-align: left;
+            background: #f8faff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid #cce0ff;
             font-size: 0.9rem;
-            color: #94a3b8;
-            margin-bottom: 15px;
-        }
-        .address-box {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
         }
         code {
-            background: #020617;
-            color: #38bdf8;
-            padding: 12px;
+            display: block;
+            background: #eee;
+            padding: 10px;
             border-radius: 8px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
             word-break: break-all;
-            width: 100%;
-            max-width: 450px;
+            font-family: monospace;
+            margin-top: 8px;
+            color: #0052cc;
         }
-        button {
-            background-color: #3b82f6;
+        .x-link {
+            display: inline-block;
+            background-color: #000;
             color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        button:hover {
-            background-color: #2563eb;
-            transform: translateY(-2px);
-        }
-        .footer-links {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-        }
-        .footer-links a {
-            color: #64748b;
+            padding: 14px 32px;
+            border-radius: 50px;
             text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
         }
-        .footer-links a:hover {
-            color: #3b82f6;
+        .x-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
+        .footer-date {
+            margin-top: 2rem;
+            font-weight: bold;
+            color: #0052cc;
+            font-size: 1.1rem;
+        }
+        /* コントラクト表示のデザイン */
+.contract-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #3b82f6;
+    text-align: center;
+    margin: 20px 0;
+}
+.address-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+code {
+    background: #020617;
+    color: #38bdf8;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    word-break: break-all;
+    width: 100%;
+}
+.copy-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+        <div class="contract-section">
+    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 10px;">CONTRACT ADDRESS (BASE)</div>
+    <div class="address-box">
+        <code id="contract-address">0xeBB87740aA28b48aDE68E5A3D5555cc270C125F</code>
+        <button class="copy-btn" id="copy-btn" onclick="copyToClipboard()">Copy Address</button>
+    </div>
+</div>
+
     </style>
 </head>
 <body>
-
-    <header>
-        <img src="logo.svg" alt="RESO Logo" class="logo">
-        <h1>Hibiki Resonance</h1>
-        <p>$RESO - The Peak of Base Network</p>
-    </header>
-
     <div class="container">
-        <div class="contract-section">
-            <div class="contract-title">TOKEN CONTRACT ADDRESS (BASE)</div>
-            <div class="address-box">
-                <code id="contract-address">0xeBB87740aA28b48aDE68E5A3D5555cc270C125F</code>
-                <button id="copy-btn" onclick="copyToClipboard()">Copy Address</button>
-            </div>
+        <h1>Hibiki Resonance ($RESO)</h1>
+        <p class="supply">Total Supply: <span class="highlight">37,760,000</span></p>
+
+        <div class="story-text">
+            <span class="section-title">Our Story</span><br>
+            情報工学を専攻する一人の学生として、ブロックチェーンという革新的な技術の「透明性」と「可能性」に深く魅了されました。<br><br>
+            「技術を形にし、誰かの心に響かせたい」という想い、そして日本が誇る富士山の圧倒的な存在感。この二つを融合させたのが、Hibiki Resonance ($RESO) です。
         </div>
 
-        <section style="text-align: center;">
-            <h2>About Project</h2>
-            <p>富士山の日（2月23日）にローンチ予定のコミュニティトークン。総供給量は富士山の高さにちなんだ37,760,000枚です。</p>
-        </section>
+        <div class="story-text">
+            <span class="section-title">Our Vision</span><br>
+            私たちの目的は、単なるミームコインを作ることではありません。富士山の標高 $3,776m$ にちなんだ発行枚数には、「共に高みを目指す」という願いが込められています。<br><br>
+            Baseネットワークの頂点を目指し、技術的な誠実さとコミュニティの共鳴（Resonance）を大切にするエコシステムを築き上げます。
+        </div>
+
+        <div class="info-box">
+            <strong>📊 Tokenomics</strong><br>
+            • Mint: Disabled (追加発行不可)<br>
+            • LP Burn: Scheduled on Feb 23<br>
+            • Network: Base Mainnet<br><br>
+            <strong>📍 Contract Address</strong>
+            <code>0xeBB87740aA28b48aDE68E5A3D5555cc270C125F</code>
+        </div>
+
+        <p class="footer-date">⛰️ 2026.02.23 (富士山の日) 始動</p>
+
+        <a href="https://x.com/Hibiki_RESO_223" class="x-link">Follow on Official X</a>
+        
+        <p style="font-size: 0.8rem; color: #999; margin-top: 2.5rem;">
+            © 2026 Hibiki Resonance Project.
+        </p>
     </div>
-
-    <div class="footer-links">
-        <a href="https://x.com/Hibiki_RESO_223" target="_blank">Twitter (X)</a>
-        <a href="https://github.com/gbrbhf29rx-dotcom/Project-reso" target="_blank">GitHub</a>
-    </div>
-
-    <script>
-        function copyToClipboard() {
-            const copyText = document.getElementById("contract-address").innerText;
-            navigator.clipboard.writeText(copyText).then(() => {
-                const btn = document.getElementById("copy-btn");
-                btn.innerText = "Copied!";
-                btn.style.backgroundColor = "#10b981";
-                
-                setTimeout(() => {
-                    btn.innerText = "Copy Address";
-                    btn.style.backgroundColor = "#3b82f6";
-                }, 2000);
-            });
-        }
-    </script>
-
 </body>
+    <script>
+    function copyToClipboard() {
+        const addr = document.getElementById("contract-address").innerText;
+        navigator.clipboard.writeText(addr).then(() => {
+            const btn = document.getElementById("copy-btn");
+            btn.innerText = "Copied!";
+            btn.style.background = "#10b981";
+            setTimeout(() => {
+                btn.innerText = "Copy Address";
+                btn.style.background = "#3b82f6";
+            }, 2000);
+        });
+    }
+</script>
+
 </html>
